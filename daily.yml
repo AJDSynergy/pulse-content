@@ -1,11 +1,8 @@
 name: Generate Daily Display Image
 
 on:
-  # Run every day at 2am UTC = midnight AEST (UTC+10) / 1am AEDT (UTC+11)
   schedule:
     - cron: '0 2 * * *'
-
-  # Allow manual trigger from GitHub Actions tab
   workflow_dispatch:
 
 jobs:
@@ -13,27 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # needed to commit display.png back to repo
+      contents: write
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Install Python dependencies
-        run: |
-          pip install Pillow
+        run: pip install Pillow
 
       - name: Install fonts
-        run: |
-          sudo apt-get install -y fonts-freefont-ttf fonts-dejavu-core
+        run: sudo apt-get install -y fonts-freefont-ttf fonts-dejavu-core
 
       - name: Generate display image
-        run: |
-          python3 generate_image.py
+        run: python3 generate_image.py
 
       - name: Commit and push display.png
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add display.png
           git diff --staged --quiet || git commit -m "Daily display image $(date +'%Y-%m-%d')"
