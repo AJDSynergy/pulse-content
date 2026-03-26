@@ -190,5 +190,5 @@ if __name__ == "__main__":
     print(f"Day: {day_name}  Date: {long_date}")
     print(f"Tip ({len(tip)} chars): {tip}")
     img = generate(tip, day_name, long_date)
-    img.save(OUTPUT, "JPEG", quality=95)
+    img.save(OUTPUT, "JPEG", quality=100)
     print(f"Saved: {OUTPUT} ({W}x{H}px)")
