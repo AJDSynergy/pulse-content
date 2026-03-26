@@ -163,13 +163,12 @@ def generate(tip, day_name, long_date):
    
 
     # ── Footer ────────────────────────────────────────────────────
-    draw.rectangle([0, bot_y+1, W, H], fill=BG)
 
     website = "synergyfundraising.com.au"
     email   = "hello@synergyfundraising.com.au"
     pipe    = "|"
 
-    footer_y = 8
+    footer_y = 239
     wb = draw.textbbox((0, 0), website, font=font_dv_13)
     pb = draw.textbbox((0, 0), pipe,    font=font_dv_13)
     eb = draw.textbbox((0, 0), email,   font=font_dv_13)
