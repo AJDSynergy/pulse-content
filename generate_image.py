@@ -160,9 +160,7 @@ def generate(tip, day_name, long_date):
         draw.text((MARGIN, tip_top), line, font=font_bold_16, fill=DARK)
         tip_top += LINE_H
 
-    # ── Bottom separator — thin black line ────────────────────────
-    bot_y = 235
-    draw.rectangle([0, bot_y, W, bot_y+1], fill=DARK)
+   
 
     # ── Footer ────────────────────────────────────────────────────
     draw.rectangle([0, bot_y+1, W, H], fill=BG)
