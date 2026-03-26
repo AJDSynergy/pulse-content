@@ -152,10 +152,10 @@ def generate(tip, day_name, long_date):
 
     # ── Tip section ───────────────────────────────────────────────
     tip_top = sep_y + 20
-    draw.text((MARGIN, tip_top), "TIP OF THE DAY", font=font_bold_16, fill=DARK)
+    draw.text((MARGIN, tip_top), "TIP OF THE DAY", font=font_bold_16, fill=BLUE)
     tip_top += 24
 
-    lines = wrap_text(draw, tip, font_reg_16, TEXT_W)
+    lines = wrap_text(draw, tip, font_bold_16, TEXT_W)
     for line in lines:
         draw.text((MARGIN, tip_top), line, font=font_bold_16, fill=DARK)
         tip_top += LINE_H
@@ -171,7 +171,7 @@ def generate(tip, day_name, long_date):
     email   = "hello@synergyfundraising.com.au"
     pipe    = "|"
 
-    footer_y = bot_y + 8
+    footer_y = bot_y - 8
     wb = draw.textbbox((0, 0), website, font=font_dv_13)
     pb = draw.textbbox((0, 0), pipe,    font=font_dv_13)
     eb = draw.textbbox((0, 0), email,   font=font_dv_13)
