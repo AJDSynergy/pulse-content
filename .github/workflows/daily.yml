@@ -1,4 +1,4 @@
-name: Daily
+name: Generate Daily Display Image
 on:
   schedule:
     - cron: '0 2 * * *'
