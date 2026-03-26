@@ -152,12 +152,12 @@ def generate(tip, day_name, long_date):
 
     # ── Tip section ───────────────────────────────────────────────
     tip_top = sep_y + 20
-    draw.text((MARGIN, tip_top), "TIP OF THE DAY", font=font_bold_14, fill=BLUE)
+    draw.text((MARGIN, tip_top), "TIP OF THE DAY", font=font_bold_16, fill=BLUE)
     tip_top += 24
 
     lines = wrap_text(draw, tip, font_reg_16, TEXT_W)
     for line in lines:
-        draw.text((MARGIN, tip_top), line, font=font_reg_16, fill=BLACK)
+        draw.text((MARGIN, tip_top), line, font=font_bold_16, fill=BLACK)
         tip_top += LINE_H
 
     # ── Bottom separator — thin black line ────────────────────────
