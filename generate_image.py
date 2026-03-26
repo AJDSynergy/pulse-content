@@ -157,7 +157,7 @@ def generate(tip, day_name, long_date):
 
     lines = wrap_text(draw, tip, font_reg_16, TEXT_W)
     for line in lines:
-        draw.text((MARGIN, tip_top), line, font=font_reg_16, fill=DARK)
+        draw.text((MARGIN, tip_top), line, font=font_reg_16, fill=BLACK)
         tip_top += LINE_H
 
     # ── Bottom separator — thin black line ────────────────────────
