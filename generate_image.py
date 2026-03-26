@@ -161,7 +161,7 @@ def generate(tip, day_name, long_date):
         tip_top += LINE_H
 
     # ── Bottom separator — thin black line ────────────────────────
-    bot_y = 247
+    bot_y = 235
     draw.rectangle([0, bot_y, W, bot_y+1], fill=DARK)
 
     # ── Footer ────────────────────────────────────────────────────
